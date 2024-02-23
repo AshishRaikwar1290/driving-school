@@ -4,7 +4,7 @@ function InstructorDetails() {
     <div className={styles.instructor_container}>
     <h1>Course Instructor</h1>
     <div className={styles.inner_container}>
-    <div>
+    <div className={styles.image_container}>
         <img src="https://st2.depositphotos.com/2208684/5796/i/450/depositphotos_57968153-stock-photo-teacher-in-front-of-black.jpg" alt="instructor"></img>
     </div>
     <div className={styles.details_container}>
