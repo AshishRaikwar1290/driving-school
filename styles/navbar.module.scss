@@ -1,0 +1,39 @@
+.navbar_container{
+    display: flex;
+    :global(.container){
+        width: 100%;
+        justify-content: end !important;
+    @media screen and (max-width: 616px) {
+    font-size: 14px !important;
+    padding:unset !important;
+    a{
+        font-size: 14px !important;
+    }
+    }
+}
+.brand_container{
+    max-height: 70px;
+    width: -webkit-fill-available;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    img{
+        height: 60px;
+        width: 60px;
+        border-radius: 2rem;
+    }
+    @media screen and (max-width: 616px) {
+        h3{
+        font-size: 12px !important;
+        margin: unset;
+        }
+        img{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+}

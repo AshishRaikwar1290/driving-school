@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/testinomial.module.scss";
 import car_running from '../assets/car_running.gif';
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 const testimonials = [
   {
@@ -64,21 +62,17 @@ const Testinomials = () => {
     
 //   }
   useEffect(() => {
-    console.log(idx);
     setCurrentTestinomial(testimonials[idx]);
 }, [idx]);
 
     useEffect(()=>{
-        console.log("ok")
         setInterval(()=>setIdx(prev=> (prev+1)%testimonials.length), 10000);
     },[])
   return (
     <div className={styles.testinomial}>
         <h1>Testinomials</h1>
     <div className={styles.testimonial_container}>
-        {console.log(car_running)}
         <img src={car_running?.src} width="100%" height="200"></img>
-        
         <br/><br/>
       <div className={styles.progress_bar}></div>
       <div

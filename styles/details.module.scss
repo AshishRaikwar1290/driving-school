@@ -1,0 +1,42 @@
+.details_container{
+    background-color:transparent;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 616px) {
+        padding:10px;
+    }
+    .inner_container{
+        background-color: #393E46;
+        width: 64%;
+        display: flex;
+        padding: 40px;
+        justify-content: space-around;
+        color: white;
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            gap: 2px;
+            svg{
+                margin-right: 10px;
+                @media screen and (max-width: 616px) {
+                    margin-right: 5px;
+                }
+            }
+            p{
+                margin: unset;
+                font-size: 22px;
+                @media screen and (max-width: 616px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        @media screen and (max-width: 616px) {
+            width: 86%;
+            padding: 20px;
+        }
+    }
+}
