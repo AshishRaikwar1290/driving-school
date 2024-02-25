@@ -1,0 +1,178 @@
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+      @content;
+    }
+    @-moz-keyframes #{$animationName} {
+      @content;
+    }
+    @-o-keyframes #{$animationName} {
+      @content;
+    }
+    @keyframes #{$animationName} {
+      @content;
+    }
+  }
+  
+  // Prefixes properties with browser specific tags
+  @mixin prefix($declarations, $prefixes: webkit moz) {
+    @each $property,
+    $value in $declarations {
+      @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+      }
+      // Output standard non-prefixed declaration
+      #{$property}: $value;
+    }
+  }
+  
+  // clearfix hack
+  @mixin clearfix {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+  // Centers an element using the absolute positioning hack
+  @mixin absolute-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    ::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+  }
+  
+  
+.gallery_container{
+  background:#ef8181;
+  background-size: 600% 600%;
+  font-size: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include prefix((animation: animate-body 30s ease infinite));
+  *, *:before, *:after {
+    @include prefix((box-sizing: border-box));
+  }
+  @include scrollbars(.5em, #888, #ddd);
+  @include keyframes(animate-body) {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+
+  h1 {
+    font-size: 2.55em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 3px 10px #ec3f3f;
+    
+  }
+
+  .image_gallery {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    background: #fff;
+    overflow: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 6px;
+    padding: 6px;
+    @include prefix(( box-shadow: 0 3px 10px #ec3f3f));
+    
+    @media screen and (min-width: 800px) {
+      height: 500px;
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto,1fr);
+        padding-top: unset;
+        padding-bottom: unset;
+        grid-row-gap: 0px;
+      }
+
+      @media screen and (max-width: 616px) {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto,1fr);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        grid-row-gap: 0px;
+      }
+    
+    &-items {
+      position: relative;
+      @include clearfix;
+    }
+  }
+  
+  .gallery_item {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+    
+    @include prefix((user-select: none));
+    > div {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 60%;
+      }
+    }
+  }
+  
+  .thumbnail {
+    overflow: hidden;
+    @include absolute-center;
+    &:after {
+      content: "";
+      display: block;
+      overflow: hidden;
+      @include absolute-center;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-height: 100%;
+      max-width: inherit;
+      @include prefix(( transform: translate(-50%, -50%), transition: transform 150ms ease-in-out));
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include prefix(( transform: translate(50%, 50%)));
+    }
+    &:hover img {
+      @include prefix((transform: translate(-50%, -50%) scale(1.15)));
+    }
+  }
+}
