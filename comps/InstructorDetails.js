@@ -1,11 +1,15 @@
+import Image from 'next/image';
 import styles from '../styles/instructor.module.scss';
+import owner from '../assets/owner.jpeg';
+import Card from 'react-bootstrap/Card';
 function InstructorDetails() {
   return (
-    <div className={styles.instructor_container}>
+    <Card className={styles.instructor_container}>
+      <Card.Body>
     <h1>Course Instructor</h1>
     <div className={styles.inner_container}>
     <div className={styles.image_container}>
-        <img src="https://st2.depositphotos.com/2208684/5796/i/450/depositphotos_57968153-stock-photo-teacher-in-front-of-black.jpg" alt="instructor"></img>
+        <Image src={owner} alt="instructor" width="200" />
     </div>
     <div className={styles.details_container}>
         <h3>Mr. Hariom</h3>
@@ -14,7 +18,8 @@ function InstructorDetails() {
         </p>
     </div>
     </div>
-    </div>
+    </Card.Body>
+    </Card>
   )
 }
 export default InstructorDetails

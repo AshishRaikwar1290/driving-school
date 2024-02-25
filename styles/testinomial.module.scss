@@ -1,0 +1,110 @@
+// *, *::before, *::after{
+//     box-sizing: border-box;
+//     margin:0;
+//   }
+  
+//   body{
+//     font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+//     background-color:#222831 ;
+//     display: grid;
+//     place-items: center;
+//     height: 100vh;
+//     overflow: hidden;
+//     padding: 10px;
+//   }
+  .testinomial{
+    color:#fff;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    background-color:#222831 ;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .testimonial_container{
+    background-color: #393E46;
+    color: #fff;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 50px 80px;
+    max-width: 768px;
+    position:relative;
+  }
+  
+  .fa_quote{
+    color:#FFD369;
+    font-size: 28px;
+    position: absolute;
+    top: 70px;
+  }
+  
+  .fa_quote_right{
+    left: 40px;
+  }
+  
+  .fa_quote_left{
+    right: 40px;
+  }
+  
+  .testimonial{
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  
+  .user{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .user .user_image{
+    border-radius: 50%;
+    border: 3px solid #FFD369;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+  }
+  
+  .user .user_details{
+    margin-left: 10px;
+  }
+  
+  .user .username{
+    margin: 0;
+  }
+  
+  .user .role{
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  
+  .progress_bar{
+    background-color: #FFD369;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+  }
+  
+  @keyframes grow{
+    0%{
+      transform: scaleX(0);
+    }
+  }
+  
+  
+  
+  
+  @media(max-width: 768px){
+    .testimonial_container{
+      padding: 20px 30px;
+    }
+    
+    .fa_quote{
+      display: none;
+    }
+  }
