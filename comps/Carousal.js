@@ -9,21 +9,21 @@ function IndividualIntervalsExample() {
   return (
     <Carousel className='carousel'>
       <Carousel.Item interval={1000}>
-        <Image className={styles.image} src={carousel_bg_1}/>
+        <Image className={styles.image} src={carousel_bg_1} alt='carousel_bg_1'/>
         <Carousel.Caption>
           <h3>Hariom Motor Driving School</h3>
           <p>Get best driving training here</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
-      <Image className={styles.image} src={carousel_bg_2}/>
+      <Image className={styles.image} src={carousel_bg_2} alt='carousal_bg_2' />
         <Carousel.Caption>
           <h3>Hariom Motor Driving School</h3>
           <p>Get best driving training here.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <Image className={styles.image} src={carousel_bg_1}/>
+      <Image className={styles.image} src={carousel_bg_1} alt='carousal_bg_1'/>
         <Carousel.Caption>
           <h3>Hariom Motor Driving School</h3>
           <p>

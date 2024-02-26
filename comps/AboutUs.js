@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <div class="about_us_container">
+    <div class="about_us_container" id='about'>
       <section class="about-section">
         <div class="container">
           <div class="row">
@@ -166,7 +166,7 @@ function AboutUs() {
                   </div>
                 </div>
                 <div class="btn-box mt-3">
-                  <a href="#" class="theme-btn btn-style-one">
+                  <a href="#contact_us" class="theme-btn btn-style-one">
                     Contact Us
                   </a>
                 </div>
@@ -181,9 +181,9 @@ function AboutUs() {
                 <figure class="image-1">
                   <a href="#" class="lightbox-image" data-fancybox="images">
                     <img
-                      title="Rahul Kumar Yadav"
+                      title="Hariom Driving School"
                       src="https://i.ibb.co/QP6Nmpf/image-1-about.jpg"
-                      alt=""
+                      alt="background"
                     />
                   </a>
                 </figure>

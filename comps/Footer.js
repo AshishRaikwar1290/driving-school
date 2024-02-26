@@ -7,7 +7,7 @@ const Footer = () => {
    <footer className={`${styles.footer_container} footer-section`}>
     <h1 className={styles.contact_us_heading}>Contact Us</h1>
         <div className="container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.5521153271525!2d77.3855839!3d28.5231201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce89f5ee7f7bb%3A0x81a6341e2a994fbb!2sHari%20Om%20Motors%20Driving%20Training%20School%2C%20Best%20Driving%20School%20in%20Noida!5e0!3m2!1sen!2sin!4v1708809733708!5m2!1sen!2sin" width="100%" height="400"  allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.5521153271525!2d77.3855839!3d28.5231201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce89f5ee7f7bb%3A0x81a6341e2a994fbb!2sHari%20Om%20Motors%20Driving%20Training%20School%2C%20Best%20Driving%20School%20in%20Noida!5e0!3m2!1sen!2sin!4v1708809733708!5m2!1sen!2sin" width="100%" height="400"  allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             <div className="footer-cta pt-5 pb-5">
                 <div className="row">
                     <div className="col-xl-3 col-md-3 mb-30">

@@ -8,14 +8,14 @@ function ColorSchemesExample() {
     <>
       <Navbar bg="dark" data-bs-theme="dark" className={styles.navbar_container}>
           <div className={styles.brand_container}>
-          <img src="https://randomuser.me/api/portraits/men/43.jpg" alt='' />
+          <img src="https://randomuser.me/api/portraits/men/43.jpg" alt=''/>
           <h3>Hariom Motor Driving School</h3>
           </div>
         <Container>
-          <Navbar.Brand href="/">Home</Navbar.Brand>
-            <Navbar.Brand href="/">Details</Navbar.Brand>
-            <Navbar.Brand href="/reviews">Reviews</Navbar.Brand>
-            <Navbar.Brand href="/about">About</Navbar.Brand>
+          <Navbar.Brand href='/' >Home</Navbar.Brand>
+            <Navbar.Brand href="#details">Details</Navbar.Brand>
+            <Navbar.Brand href="#reviews">Reviews</Navbar.Brand>
+            <Navbar.Brand href="#about">About</Navbar.Brand>
         </Container>
       </Navbar>
     </>

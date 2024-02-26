@@ -9,7 +9,7 @@ function InstructorDetails() {
     <h1>Course Instructor</h1>
     <div className={styles.inner_container}>
     <div className={styles.image_container}>
-        <Image src={owner} alt="instructor" width="200" />
+        <Image src={owner} alt="instructor" width="200"/>
         <h3>Mr. Hariom</h3>
     </div>
     <div className={styles.details_container}>

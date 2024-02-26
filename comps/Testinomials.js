@@ -52,15 +52,7 @@ const testimonials = [
 const Testinomials = () => {
   const [currentTestinomial, setCurrentTestinomial] = useState(testimonials[0]);
   const [idx, setIdx] = useState(0);
-
-//   function updateTestimonials() {
-    
-
-//     console.log(idx);
-    
-
-    
-//   }
+  
   useEffect(() => {
     setCurrentTestinomial(testimonials[idx]);
 }, [idx]);
@@ -69,10 +61,10 @@ const Testinomials = () => {
         setInterval(()=>setIdx(prev=> (prev+1)%testimonials.length), 10000);
     },[])
   return (
-    <div className={styles.testinomial}>
+    <div className={styles.testinomial} id="reviews">
         <h1>Testinomials</h1>
     <div className={styles.testimonial_container}>
-        <img src={car_running?.src} width="100%" height="200"></img>
+        <img src={car_running?.src} width="100%" height="200" alt="car running"></img>
         <br/><br/>
       <div className={styles.progress_bar}></div>
       <div
